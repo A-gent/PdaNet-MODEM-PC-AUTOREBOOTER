@@ -4,6 +4,9 @@ Programmatically reboot the PC to allow for easy PdaNet connection to router WAN
 
 ## SETUP
 
+0.) Install [this powershell module](https://github.com/loxia01/PSInternetConnectionSharing), using the installation instructions on its page to do so.
+<br>
+<br>
 1.) unzip the release to a folder of your own creation (in a place where no spaces will exist in the directory tree) then configure the "START_SECONDARY.bat" batch file's directory to point to your current SECONDARY_APP.exe file, set the "TargetDirectory" in the config file, "ICSPowershellDisablerScript" directory to the ICS-Stop.ps1 file, and "ICSPowershellScript" directory to the ICS-Set.ps1 file all available within the config.cfg file.
 <br>
 <br>
