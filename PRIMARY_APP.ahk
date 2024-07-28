@@ -70,10 +70,21 @@ IniRead, bICSPowershellDisablerScript, config.cfg, PRIMARY_CONFIG, ICSPowershell
 GLOBAL ICSPowershellDisablerScript := bICSPowershellDisablerScript
 
 
+IniRead, bPrimaryMsgBox, config.cfg, MESSAGEBOXES, PrimaryMsgBox, Do you want to execute the Automated Modem Reboot Setup? (Press YES or NO)
+GLOBAL PrimaryMsgBox := bPrimaryMsgBox
+
+
+IniRead, bPrimaryMsgBox, config.cfg, MESSAGEBOXES, PrimaryMsgBox, Do you want to execute the Automated Modem Reboot Setup? (Press YES or NO)
+GLOBAL PrimaryMsgBox := bPrimaryMsgBox
+IniRead, bPrimaryMsgBox2, config.cfg, MESSAGEBOXES, PrimaryMsgBoxLine2,
+GLOBAL PrimaryMsgBox2 := bPrimaryMsgBox2
+IniRead, bPrimaryMsgBox3, config.cfg, MESSAGEBOXES, PrimaryMsgBoxLine3,
+GLOBAL PrimaryMsgBox3 := bPrimaryMsgBox3
+
 
 If(MessagePrompt="1")
 {
-        MsgBox, 4, AUTO-MODEM REBOOTER, Do you want to execute the Automated Modem Reboot Setup? (Press YES or NO)
+        MsgBox, 4, AUTO-MODEM REBOOTER, %PrimaryMsgBox% `n`n%PrimaryMsgBox2% `n`n`n%PrimaryMsgBox3%
         IfMsgBox, Yes
         {
         Run, powershell.exe -windowstyle hidden -ExecutionPolicy Bypass -File %ICSPowershellDisablerScript%

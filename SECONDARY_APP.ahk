@@ -58,11 +58,16 @@ IniRead, bDebug_RunTest, config.cfg, DEBUG, Debug_RunTestOnly, 0
 GLOBAL Debug_RunTest := bDebug_RunTest
 
 
+IniRead, bSecondaryMsgBox, config.cfg, MESSAGEBOXES, SecondaryMsgBox, Please allow the router to fully reboot and let all lights turn blue (except for the WAN port)`n`n Once this occurs press CONTINUE.`n`n`n (CANCEL / Try Again simply exits).
+GLOBAL SecondaryMsgBox := bSecondaryMsgBox
+IniRead, bSecondaryMsgBox2, config.cfg, MESSAGEBOXES, SecondaryMsgBoxLine2,
+GLOBAL SecondaryMsgBox2 := bSecondaryMsgBox2
+IniRead, bSecondaryMsgBox3, config.cfg, MESSAGEBOXES, SecondaryMsgBoxLine3,
+GLOBAL SecondaryMsgBox3 := bSecondaryMsgBox3
 
 
 
-
-    MsgBox, 6, AUTO-MODEM REBOOTER, Please allow the router to fully reboot and let all lights turn blue (except for the WAN port)`n`n Once this occurs press CONTINUE.`n`n`n (CANCEL / Try Again simply exits).
+    MsgBox, 6, AUTO-MODEM REBOOTER, %SecondaryMsgBox% `n`n%SecondaryMsgBox2% `n`n`n%SecondaryMsgBox3%
     IfMsgBox, Continue
     {
                 If(Debug_RunTest="1")
