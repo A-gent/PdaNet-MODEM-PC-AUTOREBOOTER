@@ -1,5 +1,6 @@
 # PdaNet-MODEM-PC-AUTOREBOOTER
-Programmatically reboot the PC to allow for easy PdaNet connection to router WAN port.
+Programmatically reboot the PC to allow for easy PdaNet connection to router WAN port.<br>
+This is a companion app for the [PDANET MODEM PC HANDLER](https://github.com/A-gent/PDAnet-Modem-PC-Handler/tree/main)
 <br><br><br>
 
 ## SETUP
