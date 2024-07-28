@@ -25,7 +25,7 @@ Press Y and then enter to confirm the change.
 <br>
 <br>
 <br>
-4.) Once all configured and unblocked, this step is optional but I prefer to create a Windows Task Scheduler task that runs with admin privileges to suppress the need to confirm a UAC prompt, and I point this task to the "PRIMARY_ARM.exe" file and give the task a name, and then I create a shortcut file on the Modem PC's desktop and paste the following: 
+4.) Once all configured and unblocked, this step is optional but I prefer to create a Windows Task Scheduler task that runs with admin privileges to suppress the need to confirm a UAC prompt, and I point this task to the "PRIMARY_APP.exe" file and give the task a name, and then I create a shortcut file on the Modem PC's desktop and paste the following: 
 ```
 C:\windows\system32\schtasks.exe /run /tn "TheNameOfYourTaskGoesHere"
 ```
