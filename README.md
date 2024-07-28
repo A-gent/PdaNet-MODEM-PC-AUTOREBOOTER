@@ -31,7 +31,6 @@ C:\windows\system32\schtasks.exe /run /tn "TheNameOfYourTaskGoesHere"
 ```
 <br>
 <br>
-<br>
 5.) Whenever your net is slowing down or doing anything funny, and are ready to reboot your PdaNet Modem PC, just double click the shortcut made in step 4. and follow the on-screen message box instructions which will guide you through the process and ensure everything occurs in the right order.
 
 
